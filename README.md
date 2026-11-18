@@ -27,5 +27,6 @@ lidless setup     # once
 lidless signin    # once: sign in to Claude inside your sandbox
 ```
 
-Then type `/lidless` in Claude Code to send the session to the cloud, and
-press Enter in the same terminal tab to bring it back.
+Then type `/lidless:away` in Claude Code to send the session to the cloud,
+and press Enter in the same terminal tab to bring it back (or `/lidless:back`
+from another session). `/lidless:status` shows what is in the cloud.
