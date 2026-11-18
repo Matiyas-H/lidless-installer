@@ -6,7 +6,7 @@
       "name": "lidless",
       "source": "./plugin",
       "description": "Move a Claude Code session to your cloud sandbox with /lidless, and bring it back.",
-      "version": "0.8.0"
+      "version": "0.9.0"
     }
   ]
 }
