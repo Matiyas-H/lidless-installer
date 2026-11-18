@@ -5,6 +5,6 @@ for c in "$(command -v lidless 2>/dev/null)" "$HOME/.local/bin/lidless" /opt/hom
   [ -n "$c" ] && [ -x "$c" ] && exec "$c" "$@"
 done
 # The guard must never block prompts just because the CLI is missing.
-[ "${1:-}" = guard ] && exit 0
+case "${1:-}" in guard|session-start) exit 0 ;; esac
 echo "Lidless is not installed. Install it with: curl -fsSL https://raw.githubusercontent.com/Matiyas-H/lidless-installer/main/install.sh | sh"
 exit 1

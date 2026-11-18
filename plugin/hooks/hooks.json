@@ -1,10 +1,24 @@
 {
-  "description": "Lidless: stop prompts to a session that is running in your cloud sandbox",
+  "description": "Lidless: stop prompts to a session that is in your cloud sandbox; tell a resumed session where it has been",
   "hooks": {
     "UserPromptSubmit": [
       {
         "hooks": [
-          { "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" guard" }
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" guard"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" session-start"
+          }
         ]
       }
     ]
