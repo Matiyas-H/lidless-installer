@@ -1,5 +1,5 @@
 {
-  "description": "Lidless: stop prompts to a session that is in your cloud sandbox; tell a resumed session where it has been",
+  "description": "Lidless: guard sessions that are in the cloud or moving; tell a resumed session where it has been; keep the ready copy current (if on)",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -18,6 +18,16 @@
           {
             "type": "command",
             "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" session-start"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" sync --hook"
           }
         ]
       }
