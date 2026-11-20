@@ -9,6 +9,7 @@ hide-from-slash-command-tool: "true"
 ```
 
 The text above is Lidless's own output. Repeat it to the user briefly, in
-plain words. If it says a session came back, add that it continues in a new
-terminal with the `claude --resume ...` command shown above (this window is
-a different session). Do not run any tools.
+plain words. If it says a Claude window of the session closes and reopens,
+say so. Otherwise, if it says a session came back, add that it continues in a new terminal with the
+`claude --resume ...` command shown above (this window is a different
+session). Do not run any tools.
