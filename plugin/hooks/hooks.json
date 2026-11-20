@@ -1,5 +1,5 @@
 {
-  "description": "Lidless: guard sessions that are in the cloud or moving; tell a resumed session where it has been; keep the ready copy current (if on)",
+  "description": "Lidless: guard sessions that are in the cloud or moving; tell a resumed session where it has been; after each turn, send what changed in the session to your bucket (lidless presync off stops it)",
   "hooks": {
     "UserPromptSubmit": [
       {
