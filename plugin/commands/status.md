@@ -5,7 +5,7 @@ hide-from-slash-command-tool: "true"
 ---
 
 ```!
-"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" leases; "${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" doctor
+"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" status; "${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" doctor
 ```
 
 The text above is Lidless's own output. Summarise it for the user in two or

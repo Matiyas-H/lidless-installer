@@ -31,4 +31,8 @@ mkdir -p "$dest"
 install -m 0755 "$tmp/lidless" "$dest/lidless"
 echo "Installed $dest/lidless ($("$dest/lidless" version))"
 case ":$PATH:" in *":$dest:"*) ;; *) echo "Add $dest to your PATH, e.g.: echo 'export PATH=\"$dest:\$PATH\"' >> ~/.zshrc" ;; esac
-echo "Next: lidless setup"
+if [ -f "$HOME/.lidless/config.json" ]; then
+  echo "Updated. Now update the Claude Code plugin too:  lidless plugin"
+else
+  echo "Next: lidless setup"
+fi

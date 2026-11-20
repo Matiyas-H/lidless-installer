@@ -1,5 +1,5 @@
 {
-  "description": "Lidless: guard sessions that are in the cloud or moving; tell a resumed session where it has been; after each turn, send what changed in the session to your bucket (lidless presync off stops it)",
+  "description": "Lidless: keep a session's window fenced while it is away or moving (prompts held, tool calls refused); bring it back when you type back; tell a resumed session where it has been; after each turn, send what changed to your bucket (lidless presync off stops it)",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -30,6 +30,18 @@
           {
             "type": "command",
             "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" sync --hook",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" guard --tool",
             "timeout": 5
           }
         ]

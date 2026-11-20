@@ -9,5 +9,6 @@ hide-from-slash-command-tool: "true"
 ```
 
 The text above is Lidless's own output. Repeat it to the user in one or two
-short sentences. Do not run any tools and do not start other work: this
-session is being moved and this window will close by itself.
+short sentences, including that this window stays open and that typing
+`back` here brings the session back. Do not run any tools and do not start
+other work: this session is being moved.
