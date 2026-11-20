@@ -32,7 +32,13 @@ install -m 0755 "$tmp/lidless" "$dest/lidless"
 echo "Installed $dest/lidless ($("$dest/lidless" version))"
 case ":$PATH:" in *":$dest:"*) ;; *) echo "Add $dest to your PATH, e.g.: echo 'export PATH=\"$dest:\$PATH\"' >> ~/.zshrc" ;; esac
 if [ -f "$HOME/.lidless/config.json" ]; then
-  echo "Updated. Now update the Claude Code plugin too:  lidless plugin"
+  # An update: the Claude Code plugin has to match the CLI (its hooks are
+  # what keeps a session's window fenced while it is away).
+  if command -v claude >/dev/null 2>&1 && "$dest/lidless" plugin >/dev/null 2>&1; then
+    echo "Updated, and the Claude Code plugin with it. Claude windows opened from now on use it; in a terminal tab opened before Lidless was set up, run: exec \$SHELL"
+  else
+    echo "Updated. Now update the Claude Code plugin too:  lidless plugin"
+  fi
 else
   echo "Next: lidless setup"
 fi
