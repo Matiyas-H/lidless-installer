@@ -1,13 +1,14 @@
 {
-  "description": "Lidless: keep a session's window fenced while it is away or moving (prompts held, tool calls refused); bring it back when you type back; tell a resumed session where it has been; after each turn, send what changed to your bucket (lidless presync off stops it)",
+  "description": "Lidless: move a session to the cloud and back from its own window, which stays open (the prompt hook carries out /lidless:away and back and waits for them; while the session is away prompts are held and tool calls refused); tell a resumed session where it has been; after each turn, send what changed to your bucket (lidless presync off stops it)",
   "hooks": {
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" guard",
-            "timeout": 30
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh\" guard --live",
+            "timeout": 3600,
+            "statusMessage": "Lidless: checking this session (a move or a return takes about half a minute; the tab title shows the step)"
           }
         ]
       }

@@ -1,15 +1,16 @@
 ---
-description: Bring this folder's cloud session back to the laptop and merge the cloud's work
+description: Bring this session back from your cloud sandbox to this laptop
 allowed-tools: ["Bash(${CLAUDE_PLUGIN_ROOT}/scripts/run.sh:*)"]
 hide-from-slash-command-tool: "true"
 ---
 
-```!
-"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" back
-```
+Lidless carries this command out itself, before it reaches you, and adds a
+note that starts with `Lidless:` to this message.
 
-The text above is Lidless's own output. Repeat it to the user briefly, in
-plain words. If it says a Claude window of the session closes and reopens,
-say so. Otherwise, if it says a session came back, add that it continues in a new terminal with the
-`claude --resume ...` command shown above (this window is a different
-session). Do not run any tools.
+If that note is here, the session is back: follow the note and do nothing
+else.
+
+If there is no such note, this window's own session was not in the cloud.
+Run `"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" back` with the Bash tool (it
+brings back a session of this folder that is in the cloud, if there is
+one) and tell the user briefly what it printed.

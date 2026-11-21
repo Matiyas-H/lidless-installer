@@ -4,11 +4,11 @@ allowed-tools: ["Bash(${CLAUDE_PLUGIN_ROOT}/scripts/run.sh:*)"]
 hide-from-slash-command-tool: "true"
 ---
 
-```!
-"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" away
-```
+Lidless carries this command out itself, before it reaches you, and adds a
+note that starts with `Lidless:` to this message.
 
-The text above is Lidless's own output. Repeat it to the user in one or two
-short sentences, including that this window stays open and that typing
-`back` here brings the session back. Do not run any tools and do not start
-other work: this session is being moved.
+If that note is here, the move is done: follow the note and do nothing else.
+
+If there is no such note, run
+`"${CLAUDE_PLUGIN_ROOT}/scripts/run.sh" away` with the Bash tool and tell
+the user, in one or two short sentences, what it printed.
