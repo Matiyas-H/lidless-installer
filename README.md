@@ -61,6 +61,7 @@ lidless allow chatgpt.com auth.openai.com api.openai.com   # once
 lidless signin codex    # once: Codex's own sign-in in your sandbox (a one-time code)
 lidless agents          # lists your Codex sessions and their ids
 lidless away SESSION    # the session moves; Codex here refuses to continue it meanwhile
+lidless away --then "finish the tests and commit" SESSION   # ... and starts on this at once
 lidless back SESSION    # it comes home; continue it in Codex as before
 ```
 
