@@ -4,26 +4,26 @@
 class Lidless < Formula
   desc "Move a running Claude Code session to your cloud sandbox and back"
   homepage "https://github.com/Matiyas-H/lidless-installer"
-  version "0.16.0"
+  version "0.17.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.16.0/lidless_darwin_arm64.tar.gz"
-      sha256 "d297b90f66691a6bc55e8ebffb49d69351606c46c9b864c9f6f18ed1de56010b"
+      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.17.0/lidless_darwin_arm64.tar.gz"
+      sha256 "bc6f194f2df5eb49acfb6581dbdc24d109e2adbcace295345d708261fc64428b"
     end
     on_intel do
-      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.16.0/lidless_darwin_amd64.tar.gz"
-      sha256 "ba153b6feeb51f5cedd5dcc9d18a7a497e038b5c93e369e45b66854c4ffa239c"
+      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.17.0/lidless_darwin_amd64.tar.gz"
+      sha256 "f46e70be91b2b587accc56f5ea165f3e55c416d12abd4217daffebcf002cbe88"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.16.0/lidless_linux_arm64.tar.gz"
-      sha256 "30498323ef78521a68d566dfcb705c7b2ff5edff57342ecd506d0f4de54393bf"
+      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.17.0/lidless_linux_arm64.tar.gz"
+      sha256 "b6ccd15d2679b309f38d7b34da67d174024bceac406a57eb771772aa757e2dbf"
     end
     on_intel do
-      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.16.0/lidless_linux_amd64.tar.gz"
-      sha256 "bc79a148cc8246eedf5f14d6d6c9d0ed4c9af16187ceb06550b698b8230b7a4a"
+      url "https://github.com/Matiyas-H/lidless-installer/releases/download/v0.17.0/lidless_linux_amd64.tar.gz"
+      sha256 "39857b951297c1882801cf5b2b9c63ad62da8aa9a4333bd9d7b43154780b446a"
     end
   end
 
