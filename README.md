@@ -62,6 +62,12 @@ the question shows whichever form that window can run.
   starting `.gitignore` if you want one.
 - `lidless carry FOLDER` always takes a folder along; `lidless leave FOLDER`
   never does.
+- MCP servers: a move names each one and says whether it goes along. A
+  remote server does once its host is allowed (`lidless allow
+  mcp.example.com`), one started with `npx` once packages are (`lidless
+  allow packages`). A server that is given a secret, or that runs a
+  program of your laptop, stays. `lidless cloud-state` shows what each
+  did in the cloud.
 
 Everything is encrypted with a key that only your laptop holds before it
 leaves the laptop. Back it up once: `lidless key backup`.
