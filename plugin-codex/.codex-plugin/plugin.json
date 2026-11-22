@@ -1,0 +1,31 @@
+{
+  "name": "lidless",
+  "version": "0.19.0",
+  "description": "Move this Codex session to your own cloud sandbox, close the laptop, and bring it back later.",
+  "author": {
+    "name": "Lidless"
+  },
+  "homepage": "https://github.com/Matiyas-H/lidless-installer",
+  "keywords": [
+    "cloud",
+    "sandbox",
+    "session",
+    "laptop"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Lidless",
+    "shortDescription": "Move this session to your cloud sandbox and back",
+    "longDescription": "Lidless moves a running coding session from your laptop to your own cloud sandbox, so you can close the lid, and brings it back with what the cloud copy did.",
+    "developerName": "Lidless",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/Matiyas-H/lidless-installer",
+    "defaultPrompt": [
+      "$lidless-away",
+      "$lidless-status"
+    ]
+  }
+}

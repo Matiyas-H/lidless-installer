@@ -51,19 +51,35 @@ without git), it says what it found and moves nothing until you answer:
 update, the same answers are `/lidless:away yes` and `/lidless:away no`;
 the question shows whichever form that window can run.
 
-## Codex (new, from a terminal)
+## Codex
 
-A Codex session moves too, for now by its id from a terminal, not yet
-from inside the Codex window:
+A Codex CLI session moves too. Once:
 
 ```sh
-lidless allow chatgpt.com auth.openai.com api.openai.com   # once
-lidless signin codex    # once: Codex's own sign-in in your sandbox (a one-time code)
-lidless agents          # lists your Codex sessions and their ids
-lidless away SESSION    # the session moves; Codex here refuses to continue it meanwhile
-lidless away --then "finish the tests and commit" SESSION   # ... and starts on this at once
-lidless back SESSION    # it comes home; continue it in Codex as before
+lidless allow chatgpt.com auth.openai.com api.openai.com
+lidless signin codex    # Codex's own sign-in in your sandbox (a one-time code)
+lidless plugin          # installs the Lidless plugin into Codex as well
 ```
+
+Then open a new terminal tab, start `codex` there, and when Codex asks
+about a new hook, trust it (or type `/hooks`).
+
+In the Codex window:
+
+- `$lidless-away`: move this session. Codex keeps hold of a session for
+  as long as its window runs, so Lidless asks you to quit Codex (Ctrl+C
+  twice). The move then starts in that terminal by itself and says when
+  the laptop can be closed.
+- `$lidless-away run the tests and fix what fails`: the same, and the
+  cloud copy starts on that instruction at once.
+- `$lidless-status`: what is in the cloud.
+
+In that terminal, Enter (or `lidless back` anywhere in the folder) brings
+the session home and opens Codex on it again, with what the cloud did.
+
+The folder must be one you have trusted in Codex on the laptop. From a
+terminal, without the plugin, the same is `lidless away [--then "..."]`
+after quitting Codex, and `lidless back`.
 
 ## What travels
 
