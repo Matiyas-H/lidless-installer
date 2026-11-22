@@ -51,6 +51,19 @@ without git), it says what it found and moves nothing until you answer:
 update, the same answers are `/lidless:away yes` and `/lidless:away no`;
 the question shows whichever form that window can run.
 
+## Codex (new, from a terminal)
+
+A Codex session moves too, for now by its id from a terminal, not yet
+from inside the Codex window:
+
+```sh
+lidless allow chatgpt.com auth.openai.com api.openai.com   # once
+lidless signin codex    # once: Codex's own sign-in in your sandbox (a one-time code)
+lidless agents          # lists your Codex sessions and their ids
+lidless away SESSION    # the session moves; Codex here refuses to continue it meanwhile
+lidless back SESSION    # it comes home; continue it in Codex as before
+```
+
 ## What travels
 
 - A git project: what git lists, its history, and the conversation.
