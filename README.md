@@ -58,6 +58,7 @@ A Codex CLI session moves too. Once:
 ```sh
 lidless allow chatgpt.com auth.openai.com api.openai.com
 lidless signin codex    # Codex's own sign-in in your sandbox (a one-time code)
+lidless phone           # pair your phone's browser: a page with your sessions that are in the cloud
 lidless plugin          # installs the Lidless plugin into Codex as well
 ```
 
