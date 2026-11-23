@@ -1,6 +1,6 @@
 {
   "name": "lidless",
-  "version": "0.19.1",
+  "version": "0.19.2",
   "description": "Move this Claude Code session to your own cloud sandbox with /lidless, close the laptop, and bring it back later.",
   "author": {
     "name": "Lidless"
