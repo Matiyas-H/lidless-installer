@@ -16,7 +16,9 @@ see this session. Tell the user exactly this, in your own short words:
 
 1. Type `/hooks` in Codex, open UserPromptSubmit, and see that
    "Lidless: checking this session" is ticked and trusted (tick it, or
-   trust it, if it is not). Then send `$lidless-away` again.
+   trust it, if it is not). Then send `$lidless-away` again. (When
+   Codex opens with "Hooks need review", "Trust all and continue"
+   there does the same.)
 2. Or, without the hook: quit Codex (Ctrl+C twice) and run `lidless away`
    in the same terminal.
 
